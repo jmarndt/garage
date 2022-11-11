@@ -54,10 +54,10 @@ def toggle_door(door_id: int):
 
 
 ## Finalize setup
-with open('garage.json', 'r') as data:
+with open("garage.json", "r") as data:
     config = json.loads(data.read())
     api_keys = config["api_keys"]
-    for door_info in config['garage_doors']:
+    for door_info in config["garage_doors"]:
         garage_doors.append(GarageDoor.parse_raw(json.dumps(door_info)))
 
 
