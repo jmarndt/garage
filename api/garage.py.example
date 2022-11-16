@@ -1,0 +1,17 @@
+from pydantic import BaseModel
+
+
+class GarageDoor(BaseModel):
+    door_id: int
+    control_pin: int
+
+
+garage_doors = [
+    GarageDoor(door_id=1, control_pin=7),
+    GarageDoor(door_id=2, control_pin=11)
+    ]
+
+
+api_keys = {
+    "johndoe": "some-api-key"
+    }
